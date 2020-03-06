@@ -1,0 +1,210 @@
+
+/* Code for site */
+
+body, html {
+    background-image: url(image\ reversed.jpg);
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    margin: 0;
+    overflow: hidden;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+.container {
+    width: auto;
+    margin: 0 auto;
+    /* border: 1px dashed black; */
+    
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    /* border: 1px solid black; */
+}
+
+.navbar {
+    /* border: 5px dashed pink; */
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+    margin-top: 2%;
+    margin-right: 5%;
+    color: #B6D2E8;
+}
+
+.header {
+    /* border: 2px dashed red; */
+    text-align: center;
+    /* align-items: left; */
+    /* justify-content: center; */
+    font-size: 32px;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    width: 71%;
+    margin-left: 13%;
+    margin-top: -3px;
+    /* border: 2px solid pink; */
+}
+
+.about {
+    /* border: 2px solid yellow; */
+    width: 30%;
+    height: 167px;
+    margin: 2% 0 4% 7%;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+p {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.why {
+    /* border: 2px dashed purple; */
+    width: 30%;
+    height: 167px;
+    margin-left: 7%;
+    color: black;
+}
+
+
+p {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.login {
+    /* border: 1px dashed blue; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    width: 25%;
+    position: absolute;
+    top: 280px;
+    right: 169px;
+    background-color: whitesmoke;
+    height: 35%;
+    border-radius: 5%;
+}
+
+/* .login:hover {
+    opacity: 5px;
+} */
+
+
+.login h2 {
+    text-align: center;
+    color: black;
+}
+
+.username .password {
+    text-align: center;
+    width: 45%;
+    /* font-weight: bolder; */
+}
+
+.password {
+    margin-bottom: 5%;
+}
+
+/* .password {
+    width: 40%;
+} */
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.blogin {
+    width: 100px;
+    margin: 5px;
+    height: 46px;
+    background-color: #B5D1E8;
+    font-weight: bold;
+    border-radius: 9%;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+}
+
+.bregister {
+    width: 100px;
+    margin: 5px;
+    height: 46px;
+    background-color: #2D435C;
+    font-weight: bold;
+    border-radius: 9%;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+}
+
+.remember {
+    margin-top: 5%;
+}
+
+/* Mobile Approach */
+ /* At 500px And below do the following: */
+ @media (max-width: 500px) {
+
+    body {
+        overflow: scroll;
+    }
+    
+    .container {
+        width: 100%;
+    }
+
+    .information {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .about {
+        width:auto;
+        background-color: whitesmoke;
+        height: auto;
+        border-radius: 5%;
+        padding-left: 13px;
+        padding-right: 5px;
+        padding-bottom: 5px;
+    }
+
+    .why {
+        width: auto;
+        background-color: whitesmoke;
+        height: auto;
+        border-radius: 5%;
+        padding-left: 13px;
+        padding-right: 5px;
+        padding-bottom: 5px;
+    }
+
+    .login {
+        /* visibility: hidden; */
+        top: 761px;
+        width: auto;
+        height: auto;
+        margin-right: -28px;
+    }
