@@ -1,4 +1,60 @@
 
+
+.flexrow() {
+    display: flex;
+    flex-direction: row;
+}
+
+.flexcolum() {
+    display: flex;
+    flex-direction: column;
+}
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 /* Code for site */
 
 body, html {
@@ -11,19 +67,21 @@ body, html {
     background-size: cover;
     margin: 0;
     overflow: hidden;
-    -moz-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-    filter: FlipH;
-    -ms-filter: "FlipH";
+ 
 }
+
 
 .container {
     width: auto;
     margin: 0 auto;
-    /* border: 1px dashed black; */
-    
+    /* border: 1px dashed black; */ 
+
+
+@media (max-width: 500px) {
+    .container {
+        width: 100%;
+        }
+    }
 }
 
 nav {
@@ -54,12 +112,15 @@ nav a {
 }
 
 .information {
-    display: flex;
-    flex-direction: column;
+    .flexcolum();
     width: 71%;
     margin-left: 13%;
     margin-top: -3px;
     /* border: 2px solid pink; */
+
+    @media (max-width: 500px) {
+        .flexcolum();
+    }
 }
 
 .about {
@@ -69,6 +130,16 @@ nav a {
     margin: 2% 0 4% 7%;
     font-weight: bold;
     font-size: 16px;
+
+    @media (max-width: 500px) {
+        width:auto;
+        background-color: whitesmoke;
+        height: auto;
+        border-radius: 5%;
+        padding-left: 13px;
+        padding-right: 5px;
+        padding-bottom: 5px;
+    }
 }
 
 p {
@@ -82,6 +153,16 @@ p {
     height: 167px;
     margin-left: 7%;
     color: black;
+
+    @media (max-width: 500px) {
+        width: auto;
+        background-color: whitesmoke;
+        height: auto;
+        border-radius: 5%;
+        padding-left: 13px;
+        padding-right: 5px;
+        padding-bottom: 5px;
+    }
 }
 
 
@@ -92,8 +173,7 @@ p {
 
 .login {
     /* border: 1px dashed blue; */
-    display: flex;
-    flex-direction: column;
+    .flexcolum();
     align-items: center;
     align-content: center;
     width: 25%;
@@ -103,6 +183,13 @@ p {
     background-color: whitesmoke;
     height: 35%;
     border-radius: 5%;
+
+    @media (max-width: 500px) {
+        top: 761px;
+        width: auto;
+        height: auto;
+        margin-right: -28px;
+    }
 }
 
 /* .login:hover {
@@ -171,34 +258,33 @@ p {
 }
 
 .group {
-    display: flex;
-    flex-direction: row;
+    .flexrow();
     justify-content: space-around;
     padding: 0 0 0 14%;
     
+    @media (max-width: 500px) {
+        .flexrow();
+        padding: 0 0 0 5%
+    }
 }
 
 .team1 {
-  display: flex;
-  flex-direction: column;
+    .flexcolum();
   margin-top: 8%;
 }
 
 .team2 {
-   display: flex;
-   flex-direction: column;
+    .flexcolum();
    margin-top: 8%;
 }  
 
 .team3 {
-    display: flex;
-    flex-direction: column;
+    .flexcolum();
     margin-top: 8%;
  }  
 
 .team4 {
-    display: flex;
-    flex-direction: column;
+    .flexcolum();
     margin-top: 8%;
 }
 
@@ -211,67 +297,9 @@ p {
 .img {
     border-radius: 5%;
     width: 350%;
-}
 
-/* Mobile Approach */
- /* At 500px And below do the following: */
- @media (max-width: 500px) {
-
-    body {
-        overflow: scroll;
-    }
-    
-    .container {
-        width: 100%;
-    }
-
-    .information {
-        display: flex;
-        flex-direction: column;
-
-    }
-
-    .about {
-        width:auto;
-        background-color: whitesmoke;
-        height: auto;
-        border-radius: 5%;
-        padding-left: 13px;
-        padding-right: 5px;
-        padding-bottom: 5px;
-    }
-
-    .why {
-        width: auto;
-        background-color: whitesmoke;
-        height: auto;
-        border-radius: 5%;
-        padding-left: 13px;
-        padding-right: 5px;
-        padding-bottom: 5px;
-    }
-
-    .login {
-        /* visibility: hidden; */
-        top: 761px;
-        width: auto;
-        height: auto;
-        margin-right: -28px;
-    }
-
-    /* Team*/
-    
-    .navbarteam {
-        display:flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-    .group {
-        display: flex;
-        flex-direction: row;
-        padding: 0 0 0 5%
-    }
-
-    .img {
+    @media (max-width: 500px) {
         width: 900%;
     }
+}
+
