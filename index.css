@@ -188,6 +188,11 @@ p {
     flex-direction: column;
  }  
 
+.team4 {
+    display: flex;
+    flex-direction: column;
+}
+
 .member {
     
     width: 8%;
